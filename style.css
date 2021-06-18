@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.scene {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(39, 39, 39);
+    position: relative;
+}
+
+.sky {
+    background-image: url(img/sky.jpg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.moon {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(253, 236, 158, 1);
+    box-shadow: 0px 0px 41px 10px rgba(253, 236, 158,0.5);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.spanish {
+    position: absolute;
+    bottom: 19vh;
+    right: 10px;
+    width: 200px;
+    height: 100px;
+    background-image: url(img/spanish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.spanish-two {
+    bottom: 10vh;
+    z-index: 10;
+}
+
+.spanish-one {
+    bottom: 15vh;
+    z-index: 8;
+}
+
+.english {
+    position: absolute;
+    bottom: 19vh;
+    left: 10px;
+    width: 200px;
+    height: 100px;
+    background-image: url(img/english.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.english-two {
+    bottom: 16vh;
+}
+
+.english-three {
+    bottom: 15vh;
+}
+
+.english-four {
+    bottom: 10vh;
+}
+
+
+.water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+
+    background-image: url(img/water.jpg);
+
+    animation: water;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+}
+
+.water--paused {
+    animation-play-state: paused;
+}
+
+.controls {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    padding: 30px 0 30px 0;
+}
+
+.controls__animation-state,
+.controls__animation-restart {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+}
+
+.controls__animation-state--active .controls__pause {
+    display: block;
+}
+
+.controls__animation-state--active .controls__play {
+    display: none;
+}
+
+.controls__play {
+    transition: opacity 0.5s;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1ms;
+}
+
+.controls__play:hover,
+.controls__play:focus {
+    opacity: 0.3;
+}
+
+.controls__pause {
+    display: none;
+    transition: opacity 0.5s;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1ms;
+}
+
+.controls__pause:hover,
+.controls__pause:focus {
+    opacity: 0.3;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes water {
+    0% {
+        background-position: 0, 0;
+    }
+
+    50% {
+        background-position: 50%, 0;
+    }
+
+    100% {
+        background-position: 0, 0;
+    }
+}

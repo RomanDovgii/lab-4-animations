@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+</head>
+<body>
+    <div class="scene">
+        <div class="sky"></div>
+        <div class="moon"></div>
+        <div class="water"></div>
+        <div class="spanish spanish-one"></div>
+        <div class="spanish spanish-two"></div>
+        <div class="spanish spanish-three"></div>
+        <div class="english english-one"></div>
+        <div class="english english-two"></div>
+        <div class="english english-three"></div>
+        <div class="english english-four"></div>
+    </div>
+    <div class="controls">
+        <button class="controls__animation-state controls__animation-state--active">
+            <svg class="controls__play" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 320.001 320.001" fill="currentColor">
+                <path d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288
+                    c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144
+                    c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
+            </svg>
+
+            <svg class="controls__pause" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 519.479 519.479" fill="currentColor">
+                <g>
+                    <g>
+                        <path d="M193.441,0h-75.484c-16.897,0-30.6,13.703-30.6,30.6v458.277c0,16.898,13.703,30.602,30.6,30.602h75.484
+                            c16.897,0,30.6-13.703,30.6-30.602V30.6C224.042,13.703,210.339,0,193.441,0z"/>
+                        <path d="M401.521,0h-75.484c-16.896,0-30.6,13.703-30.6,30.6v458.277c0,16.898,13.703,30.602,30.6,30.602h75.484
+                            c16.896,0,30.6-13.703,30.6-30.602V30.6C432.121,13.703,418.418,0,401.521,0z"/>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <button class="controls__animation-restart">
+            <svg class="controls__restart" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26 26" width="50" height="50"><path d="M 10 0 L 0 2 L 3.03125 5.03125 C 1.273438 7.222656 0.1875 9.972656 0.1875 13 C 0.1875 20.074219 5.921875 25.8125 13 25.8125 C 20.078125 25.8125 25.8125 20.074219 25.8125 13 C 25.8125 7.695313 22.59375 3.132813 18 1.1875 L 18 4.28125 C 21.027344 6.019531 23.0625 9.261719 23.0625 13 C 23.0625 18.5625 18.5625 23.0625 13 23.0625 C 7.4375 23.0625 2.9375 18.5625 2.9375 13 C 2.9375 10.726563 3.695313 8.652344 4.96875 6.96875 L 8 10 Z"/></svg>
+        </button>
+    </div>
+
+    <script src="gsap.js"></script>
+</body>
+</html>
